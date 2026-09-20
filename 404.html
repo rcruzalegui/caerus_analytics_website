@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — Caerus Analytics</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400&display=swap">
+<style>
+  :root {
+    --ground: #EDEFF2;
+    --ink: #151A21;
+    --ink-2: #39414D;
+    --muted: #5E6878;
+    --accent: #9A6423;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0E1217;
+      --ink: #E7EBF0;
+      --ink-2: #C2CAD5;
+      --muted: #8C97A6;
+      --accent: #D9A354;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    place-items: center;
+    padding: 40px 20px;
+  }
+  main { max-width: 46ch; display: grid; gap: 18px; }
+  .code {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: .6875rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  p { margin: 0; color: var(--ink-2); }
+  p.es { color: var(--muted); font-size: .9375rem; }
+  a.back {
+    justify-self: start;
+    margin-top: 6px;
+    font-size: .875rem;
+    text-decoration: none;
+    color: #FFF;
+    background: var(--accent);
+    border-radius: 3px;
+    padding: 11px 20px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="code">Error 404</span>
+  <h1>That page is not here.</h1>
+  <p>The address may be mistyped, or the page may have moved. Everything on this site lives on one page.</p>
+  <p class="es" lang="es">Esa página no existe. La dirección puede estar mal escrita o la página se movió. Todo este sitio vive en una sola página.</p>
+  <a class="back" href="/">Return to caerusanalytics.com</a>
+</main>
+</body>
+</html>

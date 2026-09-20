@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Analytics, back-office automation, and systems modernization for small businesses in Broward and Miami-Dade. Dashboards that refresh daily, not reports that arrive late.">
+<meta name="author" content="Renato Cruzalegui">
+<meta name="theme-color" content="#EDEFF2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1217" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://caerusanalytics.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caerus Analytics">
+<meta property="og:title" content="Caerus Analytics">
+<meta property="og:description" content="Analytics, back-office automation, and systems modernization for small businesses in Broward and Miami-Dade. Dashboards that refresh daily, not reports that arrive late.">
+<meta property="og:url" content="https://caerusanalytics.com/">
+<meta property="og:image" content="https://caerusanalytics.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Caerus Analytics">
+<meta name="twitter:description" content="Analitica, automatizacion administrativa y modernizacion de sistemas para pequenas empresas en Broward y Miami-Dade.">
+<meta name="twitter:image" content="https://caerusanalytics.com/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Caerus Analytics",
+  "url": "https://caerusanalytics.com/",
+  "email": "renato@caerusanalytics.com",
+  "telephone": "+1-954-554-9293",
+  "description": "Analytics, back-office automation, and systems modernization for small businesses.",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Broward County, Florida" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County, Florida" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hollywood",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "founder": { "@type": "Person", "name": "Renato Cruzalegui" },
+  "knowsLanguage": ["en", "es"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics and reporting" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Back-office automation" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systems modernization" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data foundations" } }
+  ]
+}
+</script>
+<title>Caerus Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    /* Light palette: cool slate paper, ink text, bronze accent (Lysippos' bronze Kairos) */
+    --ground: #EDEFF2;
+    --surface: #FFFFFF;
+    --surface-2: #E4E8ED;
+    --ink: #151A21;
+    --ink-2: #39414D;
+    --muted: #5E6878;
+    --line: #CBD2DB;
+    --line-soft: #DDE2E9;
+    --accent: #9A6423;
+    --accent-bright: #B8802F;
+    --accent-wash: #F0E7DA;
+    --signal: #2C6A5F;
+    --shadow: 0 1px 2px rgba(21, 26, 33, .05), 0 8px 24px -12px rgba(21, 26, 33, .18);
+
+    --f-display: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --f-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    --measure: 66ch;
+    --pad: clamp(18px, 5vw, 56px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E1217;
+      --surface: #161B22;
+      --surface-2: #1D242D;
+      --ink: #E7EBF0;
+      --ink-2: #C2CAD5;
+      --muted: #8C97A6;
+      --line: #2C343E;
+      --line-soft: #232A33;
+      --accent: #D9A354;
+      --accent-bright: #E8B86A;
+      --accent-wash: #241C10;
+      --signal: #5FB3A1;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -14px rgba(0, 0, 0, .7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0E1217;
+    --surface: #161B22;
+    --surface-2: #1D242D;
+    --ink: #E7EBF0;
+    --ink-2: #C2CAD5;
+    --muted: #8C97A6;
+    --line: #2C343E;
+    --line-soft: #232A33;
+    --accent: #D9A354;
+    --accent-bright: #E8B86A;
+    --accent-wash: #241C10;
+    --signal: #5FB3A1;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -14px rgba(0, 0, 0, .7);
+  }
+
+  /* --- language switching ------------------------------------------------ */
+  :root[data-lang="en"] [lang="es"] { display: none; }
+  :root[data-lang="es"] [lang="en"] { display: none; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: var(--f-display); font-weight: 500; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); line-height: 1.08; }
+  h2 { font-size: clamp(1.6rem, 3.6vw, 2.25rem); line-height: 1.15; }
+  h3 { font-size: 1.125rem; line-height: 1.3; font-weight: 600; }
+  p { margin: 0; }
+  a { color: inherit; }
+
+  .wrap {
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: var(--pad);
+  }
+
+  .eyebrow {
+    font-family: var(--f-mono);
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: .55em;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--accent);
+    flex: none;
+  }
+
+  /* --- header ------------------------------------------------------------ */
+  header.site {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 40;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 62px;
+    flex-wrap: wrap;
+    padding-block: 10px;
+  }
+  .mark {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    font-family: var(--f-display);
+    font-size: 1.175rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .mark .glyph {
+    font-family: var(--f-mono);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    padding: 2px 5px;
+    transform: translateY(-2px);
+  }
+  nav.links { display: flex; gap: 20px; flex-wrap: wrap; }
+  nav.links a {
+    font-size: .8125rem;
+    text-decoration: none;
+    color: var(--ink-2);
+    padding-block: 4px;
+    border-bottom: 1px solid transparent;
+  }
+  nav.links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .lang {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+    flex: none;
+  }
+  .lang button {
+    font-family: var(--f-mono);
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    padding: 6px 10px;
+    background: transparent;
+    color: var(--muted);
+    border: 0;
+    cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+  :root[data-theme="dark"] .lang button[aria-pressed="true"],
+  .lang button[aria-pressed="true"] { color: #FFF; }
+
+  /* --- hero -------------------------------------------------------------- */
+  .hero { padding-block: clamp(40px, 8vw, 84px) clamp(32px, 6vw, 64px); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: clamp(28px, 5vw, 56px);
+    align-items: start;
+  }
+  .hero h1 { margin-top: 14px; }
+  .lede {
+    margin-top: 20px;
+    font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+    color: var(--ink-2);
+    max-width: var(--measure);
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn {
+    font-family: var(--f-body);
+    font-size: .875rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 3px;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    display: inline-block;
+  }
+  .btn-solid { background: var(--accent); color: #FFF; }
+  .btn-solid:hover { background: var(--accent-bright); border-color: var(--accent-bright); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  .namecard {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-left: 2px solid var(--accent);
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+  }
+  .namecard .who {
+    font-family: var(--f-mono);
+    font-size: .6875rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .namecard p { margin-top: 10px; font-size: .9375rem; color: var(--ink-2); }
+
+  figure.chart {
+    margin: 22px 0 0;
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    padding: 18px 18px 14px;
+    box-shadow: var(--shadow);
+  }
+  figure.chart figcaption {
+    font-family: var(--f-mono);
+    font-size: .625rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  figure.chart svg { display: block; width: 100%; height: auto; max-width: 100%; }
+  .chart-note { font-size: .75rem; color: var(--muted); margin-top: 10px; line-height: 1.45; }
+
+  /* --- sections ---------------------------------------------------------- */
+  section { border-top: 1px solid var(--line-soft); padding-block: clamp(44px, 7vw, 78px); }
+  .sec-head { display: grid; gap: 14px; max-width: var(--measure); margin-bottom: clamp(28px, 4vw, 44px); }
+  .sec-head p { color: var(--ink-2); }
+
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+  .service { background: var(--surface); padding: 26px 24px; display: grid; gap: 12px; align-content: start; }
+  .service .tag { font-family: var(--f-mono); font-size: .625rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  .service p { font-size: .9375rem; color: var(--ink-2); }
+  .service ul { margin: 2px 0 0; padding-left: 1.05em; font-size: .875rem; color: var(--muted); display: grid; gap: 5px; }
+
+  .verticals { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .vertical { display: grid; gap: 10px; align-content: start; padding-top: 16px; border-top: 2px solid var(--accent); }
+  .vertical p { font-size: .9375rem; color: var(--ink-2); }
+  .metrics { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .metrics li {
+    font-family: var(--f-mono);
+    font-size: .6875rem;
+    letter-spacing: .02em;
+    color: var(--ink-2);
+    background: var(--surface-2);
+    border-radius: 2px;
+    padding: 3px 7px;
+  }
+
+  ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+  ol.steps li {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 20px;
+    padding-block: 22px;
+    border-top: 1px solid var(--line-soft);
+    align-items: start;
+  }
+  ol.steps li:first-child { border-top: 0; }
+  .step-n { font-family: var(--f-mono); font-size: .8125rem; font-weight: 600; color: var(--accent); letter-spacing: .06em; font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .step-body { display: grid; gap: 7px; }
+  .step-body p { font-size: .9375rem; color: var(--ink-2); max-width: var(--measure); }
+  .step-out { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .06em; color: var(--muted); }
+
+  .band { background: var(--accent-wash); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .band .inner { display: grid; gap: 16px; max-width: 74ch; }
+  .band blockquote { margin: 0; font-family: var(--f-display); font-size: clamp(1.35rem, 3vw, 1.85rem); line-height: 1.28; }
+  .band p { color: var(--ink-2); font-size: .9375rem; }
+
+  .about-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(26px, 5vw, 52px); align-items: start; }
+  .about-grid p { color: var(--ink-2); max-width: var(--measure); }
+  .about-grid p + p { margin-top: 14px; }
+  .facts { border: 1px solid var(--line-soft); background: var(--surface); padding: 20px 22px; display: grid; gap: 14px; }
+  .fact { display: grid; gap: 3px; }
+  .fact dt { font-family: var(--f-mono); font-size: .625rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .fact dd { margin: 0; font-size: .9375rem; }
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; }
+  .stack span { font-family: var(--f-mono); font-size: .6875rem; border: 1px solid var(--line); border-radius: 2px; padding: 3px 7px; color: var(--ink-2); }
+
+  /* --- contact ----------------------------------------------------------- */
+  .contact-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(26px, 5vw, 52px); align-items: start; }
+  form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line-soft); padding: clamp(20px, 3vw, 28px); box-shadow: var(--shadow); }
+  .field { display: grid; gap: 6px; }
+  .field label { font-family: var(--f-mono); font-size: .625rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .field input, .field select, .field textarea {
+    font-family: var(--f-body);
+    font-size: .9375rem;
+    color: var(--ink);
+    background: var(--ground);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+  .field textarea { min-height: 108px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .two-up { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .status { font-size: .8125rem; color: var(--signal); min-height: 1.2em; }
+  .direct { display: grid; gap: 10px; font-size: .9375rem; color: var(--ink-2); }
+  .direct a.mail { font-family: var(--f-mono); font-size: .9375rem; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); word-break: break-word; }
+  .reach { margin: 4px 0 0; display: grid; gap: 14px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); padding-block: 18px; }
+
+  footer.site { border-top: 1px solid var(--line-soft); padding-block: 34px 44px; }
+  footer.site .fwrap { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; align-items: baseline; }
+  footer.site p { font-size: .8125rem; color: var(--muted); max-width: 62ch; }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 860px) {
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+    nav.links { order: 3; width: 100%; gap: 16px; }
+  }
+  @media (max-width: 520px) {
+    .two-up { grid-template-columns: 1fr; }
+    ol.steps li { grid-template-columns: 1fr; gap: 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+<style>
+  html { color-scheme: light dark; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  html, body { overflow-x: hidden; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="mark" href="#top">
+      Caerus Analytics
+      <span class="glyph">KAIRÓS</span>
+    </a>
+    <nav class="links" aria-label="Section navigation">
+      <a href="#services"><span lang="en">Services</span><span lang="es">Servicios</span></a>
+      <a href="#industries"><span lang="en">Industries</span><span lang="es">Industrias</span></a>
+      <a href="#process"><span lang="en">How it works</span><span lang="es">Cómo trabajamos</span></a>
+      <a href="#about"><span lang="en">About</span><span lang="es">Quién</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">
+          <span lang="en">Analytics &amp; back-office automation · Broward County, Florida</span>
+          <span lang="es">Analítica y automatización administrativa · Condado de Broward, Florida</span>
+        </span>
+        <h1 lang="en">Your numbers, while they can still change the outcome.</h1>
+        <h1 lang="es">Sus números, cuando todavía pueden cambiar el resultado.</h1>
+        <p class="lede" lang="en">Caerus Analytics builds the reporting, automation, and modern data foundations that small businesses are usually told they are too small to have. Your bookkeeping data goes in; decisions you can act on this week come out.</p>
+        <p class="lede" lang="es">Caerus Analytics construye los reportes, la automatización y la base de datos moderna que a las pequeñas empresas suelen decirles que son demasiado pequeñas para tener. Entran los datos de su contabilidad; salen decisiones que usted puede tomar esta semana.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#contact"><span lang="en">Request a diagnostic</span><span lang="es">Solicitar un diagnóstico</span></a>
+          <a class="btn btn-ghost" href="#services"><span lang="en">See what we build</span><span lang="es">Ver qué construimos</span></a>
+        </div>
+        <div class="namecard" style="margin-top:32px">
+          <div class="who"><span lang="en">Why the name</span><span lang="es">Por qué el nombre</span></div>
+          <p lang="en">Caerus — the Roman name for Kairos, the Greek personification of the opportune moment: the narrow window in which acting still changes the result. Monthly reports that arrive three weeks late describe a window that has already closed. That gap is the problem this practice exists to close.</p>
+          <p lang="es">Caerus — el nombre romano de Kairós, la personificación griega del momento oportuno: la ventana breve en la que actuar todavía cambia el resultado. Un reporte mensual que llega tres semanas tarde describe una ventana que ya se cerró. Cerrar esa brecha es la razón de ser de esta práctica.</p>
+        </div>
+      </div>
+
+      <div>
+        <figure class="chart">
+          <figcaption>
+            <span lang="en">Cash runway, weekly · illustrative</span>
+            <span lang="es">Liquidez disponible, semanal · ilustrativo</span>
+          </figcaption>
+          <svg viewBox="0 0 320 210" role="img" aria-labelledby="chart-title">
+            <title id="chart-title">An illustrative cash-runway line falling over thirteen weeks, with the decision point marked in week seven and the month-end close marked in week twelve.</title>
+            <!-- grid -->
+            <g stroke="var(--line-soft)" stroke-width="1">
+              <line x1="34" y1="26" x2="308" y2="26"></line>
+              <line x1="34" y1="66" x2="308" y2="66"></line>
+              <line x1="34" y1="106" x2="308" y2="106"></line>
+              <line x1="34" y1="146" x2="308" y2="146"></line>
+            </g>
+            <line x1="34" y1="146" x2="308" y2="146" stroke="var(--line)" stroke-width="1"></line>
+            <!-- y labels -->
+            <g fill="var(--muted)" font-family="IBM Plex Mono, monospace" font-size="8">
+              <text x="0" y="29">120d</text>
+              <text x="0" y="69">90d</text>
+              <text x="0" y="109">60d</text>
+              <text x="0" y="149">30d</text>
+            </g>
+            <!-- runway line -->
+            <polyline fill="none" stroke="var(--ink-2)" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"
+              points="40,40 62,46 84,44 106,56 128,62 150,74 172,88 194,96 216,110 238,118 260,126 282,132 304,138"></polyline>
+            <!-- decision moment -->
+            <line x1="172" y1="18" x2="172" y2="146" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"></line>
+            <circle cx="172" cy="88" r="4.5" fill="var(--accent)"></circle>
+            <circle cx="172" cy="88" r="9" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"></circle>
+            <text x="178" y="20" fill="var(--accent)" font-family="IBM Plex Mono, monospace" font-size="8" font-weight="600">WK 7</text>
+            <!-- month end close -->
+            <line x1="260" y1="18" x2="260" y2="146" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 4"></line>
+            <circle cx="260" cy="126" r="3" fill="var(--muted)"></circle>
+            <!-- x labels -->
+            <g fill="var(--muted)" font-family="IBM Plex Mono, monospace" font-size="8">
+              <text x="34" y="160">W1</text>
+              <text x="156" y="160">W7</text>
+              <text x="288" y="160">W13</text>
+            </g>
+            <!-- legend -->
+            <g font-family="IBM Plex Mono, monospace" font-size="8">
+              <circle cx="40" cy="178" r="3.5" fill="var(--accent)"></circle>
+              <text x="50" y="181" fill="var(--ink-2)">decision still open</text>
+              <circle cx="40" cy="196" r="3" fill="var(--muted)"></circle>
+              <text x="50" y="199" fill="var(--muted)">report arrives</text>
+            </g>
+          </svg>
+          <p class="chart-note" lang="en">The shape most owners recognize: by the time the close is done, the week that mattered is five weeks gone. Every Caerus engagement ships a dashboard that refreshes daily, not a PDF that arrives monthly.</p>
+          <p class="chart-note" lang="es">La forma que casi todo dueño reconoce: cuando el cierre está listo, la semana que importaba quedó cinco semanas atrás. Cada proyecto de Caerus entrega un tablero que se actualiza a diario, no un PDF que llega una vez al mes.</p>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span lang="en">Services</span><span lang="es">Servicios</span></span>
+        <h2 lang="en">Four things, done properly, at small-business scale.</h2>
+        <h2 lang="es">Cuatro cosas, bien hechas, a escala de pequeña empresa.</h2>
+        <p lang="en">Engagements are sized for a business with hundreds of transactions a month, not millions. Analytics is built into every one of them — that is the rule this practice is organized around, not an upsell offered at the end.</p>
+        <p lang="es">Los proyectos están dimensionados para empresas con cientos de transacciones al mes, no millones. La analítica está incluida en todos — es la regla sobre la que se organiza esta práctica, no un extra que se ofrece al final.</p>
+      </div>
+
+      <div class="services">
+        <article class="service">
+          <span class="tag">01 / <span lang="en">Reporting</span><span lang="es">Reportes</span></span>
+          <h3 lang="en">Analytics &amp; reporting</h3>
+          <h3 lang="es">Analítica y reportes</h3>
+          <p lang="en">A dashboard covering the three or four numbers your week actually turns on, refreshed daily and built on definitions that are written down.</p>
+          <p lang="es">Un tablero con los tres o cuatro números de los que realmente depende su semana, actualizado a diario y construido sobre definiciones escritas y acordadas.</p>
+          <ul>
+            <li lang="en">Revenue, gross margin, cash runway, tax exposure</li>
+            <li lang="es">Ingresos, margen bruto, liquidez disponible, exposición fiscal</li>
+            <li lang="en">One consolidated view across multiple entities</li>
+            <li lang="es">Una vista consolidada de varias entidades</li>
+            <li lang="en">Monthly retainer, with a quarterly review</li>
+            <li lang="es">Retainer mensual, con revisión trimestral</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <span class="tag">02 / <span lang="en">Automation</span><span lang="es">Automatización</span></span>
+          <h3 lang="en">Back-office automation</h3>
+          <h3 lang="es">Automatización administrativa</h3>
+          <p lang="en">The recurring manual steps in your back office become scheduled, auditable ones — same output, no one retyping it.</p>
+          <p lang="es">Los pasos manuales que se repiten en su administración pasan a ser procesos programados y auditables — el mismo resultado, sin que nadie los vuelva a teclear.</p>
+          <ul>
+            <li lang="en">Bank and card reconciliation prep</li>
+            <li lang="es">Preparación de conciliaciones bancarias y de tarjetas</li>
+            <li lang="en">Invoicing, collections reminders, aging alerts</li>
+            <li lang="es">Facturación, recordatorios de cobranza, alertas de antigüedad</li>
+            <li lang="en">Document intake, payroll and sales-tax calendars</li>
+            <li lang="es">Recepción de documentos, calendarios de nómina e impuesto a las ventas</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <span class="tag">03 / <span lang="en">Modernization</span><span lang="es">Modernización</span></span>
+          <h3 lang="en">Systems modernization</h3>
+          <h3 lang="es">Modernización de sistemas</h3>
+          <p lang="en">A QuickBooks-era operation moved onto a small modern stack: a cloud warehouse, a modeling layer, and a dashboard tool that your team can actually run.</p>
+          <p lang="es">Una operación basada en QuickBooks trasladada a una plataforma moderna y ligera: un almacén de datos en la nube, una capa de modelado y una herramienta de tableros que su equipo sí puede operar.</p>
+          <ul>
+            <li lang="en">Source connections: accounting, payroll, POS, bank</li>
+            <li lang="es">Conexiones de origen: contabilidad, nómina, punto de venta, banco</li>
+            <li lang="en">Right-sized tooling, with the monthly cost stated upfront</li>
+            <li lang="es">Herramientas a la medida, con el costo mensual dicho por adelantado</li>
+            <li lang="en">Migration without losing history</li>
+            <li lang="es">Migración sin perder el historial</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <span class="tag">04 / <span lang="en">Foundations</span><span lang="es">Fundamentos</span></span>
+          <h3 lang="en">Data foundations</h3>
+          <h3 lang="es">Fundamentos de datos</h3>
+          <p lang="en">The unglamorous layer that decides whether any of the above holds up: a chart of accounts and item list that survive growth, and one agreed meaning per metric.</p>
+          <p lang="es">La capa poco vistosa que decide si todo lo anterior se sostiene: un catálogo de cuentas y una lista de productos que resisten el crecimiento, y un solo significado acordado por métrica.</p>
+          <ul>
+            <li lang="en">Chart of accounts and dimension cleanup</li>
+            <li lang="es">Limpieza del catálogo de cuentas y sus dimensiones</li>
+            <li lang="en">Written metric definitions, tested on load</li>
+            <li lang="es">Definiciones de métricas escritas y probadas en cada carga</li>
+            <li lang="en">Documentation you keep if we ever part ways</li>
+            <li lang="es">Documentación que usted conserva si algún día terminamos</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span lang="en">Industries</span><span lang="es">Industrias</span></span>
+        <h2 lang="en">Four verticals where the questions are already known.</h2>
+        <h2 lang="es">Cuatro sectores donde las preguntas ya se conocen.</h2>
+        <p lang="en">Working in a vertical repeatedly means the first dashboard starts from questions that matter rather than from a blank canvas. These are the four this practice knows in depth.</p>
+        <p lang="es">Trabajar repetidamente en un sector significa que el primer tablero parte de preguntas que importan y no de un lienzo en blanco. Estos son los cuatro que esta práctica conoce a fondo.</p>
+      </div>
+
+      <div class="verticals">
+        <article class="vertical">
+          <h3 lang="en">Export &amp; import</h3>
+          <h3 lang="es">Exportación e importación</h3>
+          <p lang="en">Landed cost is where importers lose margin quietly. Freight, duty, and demurrage get booked in different places and rarely make it back to the shipment they belong to.</p>
+          <p lang="es">El costo puesto en destino es donde los importadores pierden margen sin notarlo. Flete, aranceles y demoras se registran en lugares distintos y rara vez regresan al embarque al que pertenecen.</p>
+          <ul class="metrics">
+            <li lang="en">landed cost / unit</li><li lang="es">costo en destino / unidad</li>
+            <li lang="en">margin by shipment</li><li lang="es">margen por embarque</li>
+            <li lang="en">days in transit</li><li lang="es">días en tránsito</li>
+          </ul>
+        </article>
+
+        <article class="vertical">
+          <h3 lang="en">Healthcare practices</h3>
+          <h3 lang="es">Consultorios de salud</h3>
+          <p lang="en">Revenue arrives late and partially. Claim aging and payer mix explain most of the gap between what was billed and what landed in the account.</p>
+          <p lang="es">Los ingresos llegan tarde y de forma parcial. La antigüedad de las reclamaciones y la mezcla de pagadores explican casi toda la diferencia entre lo facturado y lo cobrado.</p>
+          <ul class="metrics">
+            <li lang="en">claim aging</li><li lang="es">antigüedad de reclamaciones</li>
+            <li lang="en">payer mix</li><li lang="es">mezcla de pagadores</li>
+            <li lang="en">visits / provider day</li><li lang="es">consultas / día por profesional</li>
+          </ul>
+        </article>
+
+        <article class="vertical">
+          <h3 lang="en">Property management</h3>
+          <h3 lang="es">Administración de propiedades</h3>
+          <p lang="en">Portfolio totals hide the two or three doors doing the damage. Per-door economics, not building averages, is where the decisions live.</p>
+          <p lang="es">Los totales del portafolio esconden las dos o tres unidades que causan el daño. La economía por unidad, no el promedio del edificio, es donde están las decisiones.</p>
+          <ul class="metrics">
+            <li lang="en">NOI / door</li><li lang="es">NOI / unidad</li>
+            <li lang="en">delinquency</li><li lang="es">morosidad</li>
+            <li lang="en">turn cost &amp; days vacant</li><li lang="es">costo de rotación y días vacante</li>
+          </ul>
+        </article>
+
+        <article class="vertical">
+          <h3 lang="en">Professional &amp; field services</h3>
+          <h3 lang="es">Servicios profesionales y de campo</h3>
+          <p lang="en">The job that felt profitable often was not, once unbilled hours and rework are counted. Job-level margin settles the argument.</p>
+          <p lang="es">El trabajo que parecía rentable a menudo no lo fue, una vez contadas las horas no facturadas y las correcciones. El margen por trabajo resuelve la discusión.</p>
+          <ul class="metrics">
+            <li lang="en">utilization</li><li lang="es">utilización</li>
+            <li lang="en">realization rate</li><li lang="es">tasa de realización</li>
+            <li lang="en">margin by job</li><li lang="es">margen por trabajo</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span lang="en">How it works</span><span lang="es">Cómo trabajamos</span></span>
+        <h2 lang="en">A sequence, not a subscription you hope pays off.</h2>
+        <h2 lang="es">Una secuencia, no una suscripción que uno espera que rinda.</h2>
+        <p lang="en">Each stage has a deliverable you keep, and each one is a natural place to stop if the value is not there. The numbering is real: the later stages depend on the earlier ones.</p>
+        <p lang="es">Cada etapa tiene un entregable que usted conserva, y cada una es un punto natural para detenerse si el valor no aparece. La numeración es real: las etapas posteriores dependen de las anteriores.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="step-n">01</span>
+          <div class="step-body">
+            <h3 lang="en">Diagnostic · about one week, fixed fee</h3>
+            <h3 lang="es">Diagnóstico · cerca de una semana, precio fijo</h3>
+            <p lang="en">An inventory of your systems and data, and a list of the decisions you currently cannot answer with either. Most of this week is spent with the people who do the work, not with the software.</p>
+            <p lang="es">Un inventario de sus sistemas y datos, y una lista de las decisiones que hoy no puede responder con ninguno de los dos. La mayor parte de esa semana se pasa con las personas que hacen el trabajo, no con el software.</p>
+            <span class="step-out"><span lang="en">Deliverable: findings memo + scoped plan with pricing</span><span lang="es">Entregable: informe de hallazgos + plan con alcance y precio</span></span>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">02</span>
+          <div class="step-body">
+            <h3 lang="en">Foundation · two to four weeks</h3>
+            <h3 lang="es">Fundamentos · de dos a cuatro semanas</h3>
+            <p lang="en">Sources connected, chart of accounts standardized, warehouse and models stood up, definitions agreed and written down. Nothing visual yet — this is the part that makes the visual part true.</p>
+            <p lang="es">Fuentes conectadas, catálogo de cuentas estandarizado, almacén de datos y modelos en marcha, definiciones acordadas y escritas. Todavía nada visual — esta es la parte que hace que la parte visual sea cierta.</p>
+            <span class="step-out"><span lang="en">Deliverable: working data model + documented definitions</span><span lang="es">Entregable: modelo de datos funcionando + definiciones documentadas</span></span>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">03</span>
+          <div class="step-body">
+            <h3 lang="en">First dashboard · by about week six</h3>
+            <h3 lang="es">Primer tablero · cerca de la semana seis</h3>
+            <p lang="en">The three or four numbers your week turns on, refreshed daily, with the first automated back-office step running alongside it.</p>
+            <p lang="es">Los tres o cuatro números de los que depende su semana, actualizados a diario, con el primer proceso administrativo automatizado funcionando en paralelo.</p>
+            <span class="step-out"><span lang="en">Deliverable: live dashboard + one automated workflow</span><span lang="es">Entregable: tablero en vivo + un flujo automatizado</span></span>
+          </div>
+        </li>
+        <li>
+          <span class="step-n">04</span>
+          <div class="step-body">
+            <h3 lang="en">Retainer · monthly, cancellable</h3>
+            <h3 lang="es">Retainer · mensual, cancelable</h3>
+            <p lang="en">Reporting upkeep, new metrics as the business changes, automation maintenance, and a quarterly session on what the numbers actually changed in how you operate.</p>
+            <p lang="es">Mantenimiento de reportes, nuevas métricas conforme cambia el negocio, mantenimiento de la automatización y una sesión trimestral sobre qué cambiaron los números en su forma de operar.</p>
+            <span class="step-out"><span lang="en">Deliverable: monthly reporting + quarterly review</span><span lang="es">Entregable: reportes mensuales + revisión trimestral</span></span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap inner">
+      <span class="eyebrow"><span lang="en">The operating rule</span><span lang="es">La regla de trabajo</span></span>
+      <blockquote lang="en">Analytics belongs in every engagement, even at the smallest scale.</blockquote>
+      <blockquote lang="es">La analítica va en cada proyecto, incluso a la escala más pequeña.</blockquote>
+      <p lang="en">A five-person company does not need less measurement than a five-hundred-person company; it needs measurement that costs proportionally less to run. So no engagement here ends at "the books are clean." It ends with a number on a screen that someone uses on a Tuesday.</p>
+      <p lang="es">Una empresa de cinco personas no necesita medir menos que una de quinientas; necesita una medición que cueste proporcionalmente menos operar. Por eso ningún proyecto termina en "los libros están al día". Termina con un número en pantalla que alguien usa un martes.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span lang="en">Who you work with</span><span lang="es">Con quién trabaja</span></span>
+        <h2 lang="en">Renato “Natto” Cruzalegui</h2>
+        <h2 lang="es">Renato “Natto” Cruzalegui</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p lang="en">Fifteen years in analytics, built leading teams in education technology and in human capital management software — two industries where the data is high volume, closely regulated, and answered to by people who are not analysts. The work has spanned customer experience, professional development, finance, and product analytics. Caerus Analytics brings that same discipline — modeled data, tested definitions, dashboards people actually open — to businesses that have never had access to it.</p>
+          <p lang="es">Quince años en analítica, construidos liderando equipos en tecnología educativa y en software de gestión de capital humano — dos industrias donde los datos son de alto volumen, están muy regulados y los usan personas que no son analistas. El trabajo ha abarcado experiencia del cliente, desarrollo profesional, finanzas y analítica de producto. Caerus Analytics lleva esa misma disciplina — datos modelados, definiciones probadas, tableros que la gente sí abre — a empresas que nunca han tenido acceso a ella.</p>
+          <p lang="en">Before and alongside analytics: operating experience in logistics, product management, and software development, which is why the conversation tends to start with how your business runs rather than with which tool to buy. Engagements are handled personally, in English or Spanish.</p>
+          <p lang="es">Antes y en paralelo a la analítica: experiencia operativa en logística, gestión de producto y desarrollo de software, y por eso la conversación suele empezar por cómo funciona su negocio y no por qué herramienta comprar. Los proyectos se atienden de forma personal, en inglés o español.</p>
+        </div>
+        <dl class="facts">
+          <div class="fact">
+            <dt><span lang="en">Industry background</span><span lang="es">Trayectoria</span></dt>
+            <dd><span lang="en">Education technology · human capital management software · logistics · product and software development</span><span lang="es">Tecnología educativa · software de gestión de capital humano · logística · producto y desarrollo de software</span></dd>
+          </div>
+          <div class="fact">
+            <dt><span lang="en">Education</span><span lang="es">Formación</span></dt>
+            <dd><span lang="en">M.S. Business Analytics, Syracuse University · M.S. Information Systems, Florida International University</span><span lang="es">Maestría en Business Analytics, Syracuse University · Maestría en Sistemas de Información, Florida International University</span></dd>
+          </div>
+          <div class="fact">
+            <dt><span lang="en">Working stack</span><span lang="es">Herramientas</span></dt>
+            <dd class="stack"><span>Snowflake</span><span>dbt</span><span>Looker</span><span>Tableau</span><span>SQL</span><span>Python</span></dd>
+          </div>
+          <div class="fact">
+            <dt><span lang="en">Based in</span><span lang="es">Ubicación</span></dt>
+            <dd><span lang="en">Hollywood, Florida · serving Broward and Miami-Dade, remote elsewhere</span><span lang="es">Hollywood, Florida · atendiendo Broward y Miami-Dade, remoto en otras zonas</span></dd>
+          </div>
+          <div class="fact">
+            <dt><span lang="en">Languages</span><span lang="es">Idiomas</span></dt>
+            <dd><span lang="en">English and Spanish, both fully working languages</span><span lang="es">Inglés y español, ambos idiomas de trabajo</span></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span lang="en">Contact</span><span lang="es">Contacto</span></span>
+        <h2 lang="en">Start with the diagnostic.</h2>
+        <h2 lang="es">Empiece por el diagnóstico.</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="direct">
+          <p lang="en">Tell me what you are running on today and the one question your current reports cannot answer. I reply to every inquiry personally, usually within two business days.</p>
+          <p lang="es">Cuénteme con qué sistemas opera hoy y cuál es la pregunta que sus reportes actuales no pueden responder. Respondo personalmente cada consulta, normalmente en un plazo de dos días hábiles.</p>
+          <dl class="reach">
+            <div class="fact">
+              <dt><span lang="en">Email</span><span lang="es">Correo</span></dt>
+              <dd><a class="mail" id="direct-mail" href="#">&nbsp;</a></dd>
+            </div>
+            <div class="fact">
+              <dt><span lang="en">Phone</span><span lang="es">Teléfono</span></dt>
+              <dd><a class="mail" id="direct-phone" href="#">&nbsp;</a></dd>
+            </div>
+          </dl>
+          <p lang="en" style="font-size:.8125rem;color:var(--muted)">The form composes the message in your own email client — nothing is sent from this page, and nothing is stored here.</p>
+          <p lang="es" style="font-size:.8125rem;color:var(--muted)">El formulario redacta el mensaje en su propio cliente de correo — nada se envía desde esta página y nada se guarda aquí.</p>
+        </div>
+
+        <form id="inquiry" novalidate>
+          <div class="two-up">
+            <div class="field">
+              <label for="f-name"><span lang="en">Name</span><span lang="es">Nombre</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-company"><span lang="en">Business</span><span lang="es">Empresa</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email"><span lang="en">Your email</span><span lang="es">Su correo</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-need"><span lang="en">What you need</span><span lang="es">Qué necesita</span></label>
+            <select id="f-need" name="need">
+              <option value="reporting"></option>
+              <option value="automation"></option>
+              <option value="modernization"></option>
+              <option value="foundations"></option>
+              <option value="unsure"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-systems"><span lang="en">Systems you run today</span><span lang="es">Sistemas que usa hoy</span></label>
+            <input id="f-systems" name="systems" type="text">
+          </div>
+          <div class="field">
+            <label for="f-message"><span lang="en">The question your reports cannot answer</span><span lang="es">La pregunta que sus reportes no responden</span></label>
+            <textarea id="f-message" name="message"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-solid" type="submit" id="f-submit"></button>
+            <button class="btn btn-ghost" type="button" id="f-copy"></button>
+          </div>
+          <p class="status" id="f-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap fwrap">
+    <div>
+      <p lang="en"><strong>Caerus Analytics</strong> · Hollywood, Florida · Analytics, back-office automation, and systems modernization for small businesses.</p>
+      <p lang="es"><strong>Caerus Analytics</strong> · Hollywood, Florida · Analítica, automatización administrativa y modernización de sistemas para pequeñas empresas.</p>
+      <p id="foot-contact" style="margin-top:8px;font-family:var(--f-mono);font-size:.75rem"></p>
+    </div>
+    <div>
+      <p lang="en">Caerus Analytics provides analytics and operations services. It does not provide legal, tax, or immigration advice.</p>
+      <p lang="es">Caerus Analytics presta servicios de analítica y operaciones. No brinda asesoría legal, fiscal ni migratoria.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Swap these two values to change every contact link on the page. */
+  var CONTACT_EMAIL = "renato@caerusanalytics.com";
+  var CONTACT_PHONE = "954-554-9293";
+
+  var root = document.documentElement;
+
+  var STRINGS = {
+    en: {
+      needs: {
+        reporting: "Analytics & reporting",
+        automation: "Back-office automation",
+        modernization: "Systems modernization",
+        foundations: "Data foundations",
+        unsure: "Not sure yet — let's talk"
+      },
+      phName: "Jane Ortega",
+      phCompany: "Ortega Imports LLC",
+      phEmail: "you@yourbusiness.com",
+      phSystems: "QuickBooks Online, Square, a spreadsheet",
+      phMessage: "Which of my products actually make money after freight and duty?",
+      submit: "Open in my email",
+      copy: "Copy the message",
+      subject: "Caerus Analytics — diagnostic inquiry",
+      copied: "Copied. Paste it into an email to " + CONTACT_EMAIL + ".",
+      copyFail: "Copy is blocked in this view. Email the details to " + CONTACT_EMAIL + " instead.",
+      opened: "Your email client should be opening. If it does not, use the copy button.",
+      needEmail: "Add your name and email so I can reply."
+    },
+    es: {
+      needs: {
+        reporting: "Analítica y reportes",
+        automation: "Automatización administrativa",
+        modernization: "Modernización de sistemas",
+        foundations: "Fundamentos de datos",
+        unsure: "Aún no estoy seguro — conversemos"
+      },
+      phName: "Jane Ortega",
+      phCompany: "Ortega Imports LLC",
+      phEmail: "usted@suempresa.com",
+      phSystems: "QuickBooks Online, Square, una hoja de cálculo",
+      phMessage: "¿Cuáles de mis productos realmente dejan dinero después del flete y los aranceles?",
+      submit: "Abrir en mi correo",
+      copy: "Copiar el mensaje",
+      subject: "Caerus Analytics — consulta de diagnóstico",
+      copied: "Copiado. Péguelo en un correo a " + CONTACT_EMAIL + ".",
+      copyFail: "La copia está bloqueada en esta vista. Envíe los datos a " + CONTACT_EMAIL + ".",
+      opened: "Su cliente de correo debería abrirse. Si no lo hace, use el botón de copiar.",
+      needEmail: "Agregue su nombre y correo para poder responderle."
+    }
+  };
+
+  function el(id) { return document.getElementById(id); }
+
+  function applyLang(lang) {
+    var t = STRINGS[lang];
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    el("lang-en").setAttribute("aria-pressed", String(lang === "en"));
+    el("lang-es").setAttribute("aria-pressed", String(lang === "es"));
+
+    el("f-name").placeholder = t.phName;
+    el("f-company").placeholder = t.phCompany;
+    el("f-email").placeholder = t.phEmail;
+    el("f-systems").placeholder = t.phSystems;
+    el("f-message").placeholder = t.phMessage;
+    el("f-submit").textContent = t.submit;
+    el("f-copy").textContent = t.copy;
+    el("f-status").textContent = "";
+
+    var sel = el("f-need");
+    for (var i = 0; i < sel.options.length; i++) {
+      var o = sel.options[i];
+      o.textContent = t.needs[o.value];
+    }
+
+    var mail = el("direct-mail");
+    mail.textContent = CONTACT_EMAIL;
+    mail.href = "mailto:" + CONTACT_EMAIL;
+
+    var phone = el("direct-phone");
+    phone.textContent = "(954) 554-9293";
+    phone.href = "tel:+1" + CONTACT_PHONE.replace(/[^0-9]/g, "");
+
+    el("foot-contact").textContent = CONTACT_EMAIL + " · (954) 554-9293";
+
+    try { localStorage.setItem("caerus-lang", lang); } catch (e) {}
+  }
+
+  function initialLang() {
+    try {
+      var saved = localStorage.getItem("caerus-lang");
+      if (saved === "en" || saved === "es") return saved;
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    return nav.indexOf("es") === 0 ? "es" : "en";
+  }
+
+  el("lang-en").addEventListener("click", function () { applyLang("en"); });
+  el("lang-es").addEventListener("click", function () { applyLang("es"); });
+
+  function currentLang() { return root.getAttribute("data-lang") === "es" ? "es" : "en"; }
+
+  function buildMessage() {
+    var lang = currentLang();
+    var t = STRINGS[lang];
+    var sel = el("f-need");
+    var need = t.needs[sel.value];
+    var L = lang === "es"
+      ? { name: "Nombre", company: "Empresa", email: "Correo", need: "Necesita", systems: "Sistemas actuales", question: "Pregunta" }
+      : { name: "Name", company: "Business", email: "Email", need: "Need", systems: "Current systems", question: "Question" };
+
+    return [
+      L.name + ": " + el("f-name").value,
+      L.company + ": " + el("f-company").value,
+      L.email + ": " + el("f-email").value,
+      L.need + ": " + need,
+      L.systems + ": " + el("f-systems").value,
+      "",
+      L.question + ":",
+      el("f-message").value
+    ].join("\n");
+  }
+
+  el("inquiry").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var t = STRINGS[currentLang()];
+    if (!el("f-name").value.trim() || !el("f-email").value.trim()) {
+      el("f-status").textContent = t.needEmail;
+      return;
+    }
+    var href = "mailto:" + CONTACT_EMAIL +
+      "?subject=" + encodeURIComponent(t.subject) +
+      "&body=" + encodeURIComponent(buildMessage());
+    window.location.href = href;
+    el("f-status").textContent = t.opened;
+  });
+
+  el("f-copy").addEventListener("click", function () {
+    var t = STRINGS[currentLang()];
+    var text = t.subject + "\n\n" + buildMessage();
+    var done = function (ok) { el("f-status").textContent = ok ? t.copied : t.copyFail; };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+        return;
+      }
+    } catch (e) {}
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      done(ok);
+    } catch (e2) { done(false); }
+  });
+
+  applyLang(initialLang());
+</script>
+</body>
+</html>
